@@ -2,7 +2,6 @@
 include 'koneksi.php';
 include 'icons.php';
 
-// Proses tambah absensi
 if (isset($_POST['tambah'])) {
     $siswa_id = $_POST['siswa_id'];
     $guru_id = $_POST['guru_id'];
@@ -16,14 +15,12 @@ if (isset($_POST['tambah'])) {
     echo "<script>alert('Absensi berhasil ditambahkan!'); window.location='absensi.php';</script>";
 }
 
-// Proses hapus absensi
 if (isset($_GET['hapus'])) {
     $id = $_GET['hapus'];
     mysqli_query($conn, "DELETE FROM absensi WHERE id='$id'");
     echo "<script>alert('Data absensi dihapus!'); window.location='absensi.php';</script>";
 }
 
-// Proses edit absensi
 if (isset($_POST['edit'])) {
     $id = $_POST['id'];
     $siswa_id = $_POST['siswa_id'];
@@ -43,7 +40,6 @@ if (isset($_POST['edit'])) {
     echo "<script>alert('Data absensi diupdate!'); window.location='absensi.php';</script>";
 }
 
-// Ambil data untuk edit
 $edit_data = null;
 if (isset($_GET['edit'])) {
     $id = $_GET['edit'];
@@ -60,7 +56,6 @@ if (isset($_GET['edit'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-logo">
             <span class="logo-mark"><?= icon('stamp', 20) ?></span>
@@ -90,10 +85,8 @@ if (isset($_GET['edit'])) {
         </nav>
     </aside>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Page Title -->
             <div class="page-title">
                 <span class="eyebrow">Manajemen Kehadiran</span>
                 <h1>
@@ -103,7 +96,6 @@ if (isset($_GET['edit'])) {
                 <p>Catat kehadiran siswa</p>
             </div>
 
-            <!-- Form Tambah/Edit Absensi -->
             <div class="form-container">
                 <div class="form-title">
                     <?= icon($edit_data ? 'pencil' : 'plus', 18) ?>
@@ -175,7 +167,6 @@ if (isset($_GET['edit'])) {
                 </form>
             </div>
 
-            <!-- Tabel Data Absensi -->
             <div class="table-container">
                 <div class="table-title">
                     <span class="icon"><?= icon('note', 16) ?></span>
