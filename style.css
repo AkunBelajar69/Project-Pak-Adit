@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
 
-/* ========== TOKENS ========== */
 :root {
     --ink: #1c2b24;
     --ink-soft: #55665c;
@@ -31,7 +30,6 @@
     --sidebar-width: 240px;
 }
 
-/* ========== RESET ========== */
 * {
     margin: 0;
     padding: 0;
@@ -65,7 +63,6 @@ a {
     text-decoration: none;
 }
 
-/* ========== SIDEBAR ========== */
 .sidebar {
     width: var(--sidebar-width);
     height: 100vh;
@@ -151,7 +148,6 @@ a {
     justify-content: center;
 }
 
-/* ========== MAIN CONTENT ========== */
 .main-content {
     margin-left: var(--sidebar-width);
     flex: 1;
@@ -164,7 +160,6 @@ a {
     margin: 0 auto;
 }
 
-/* ========== PAGE TITLE ========== */
 .page-title {
     margin-bottom: 30px;
     padding-bottom: 18px;
@@ -220,7 +215,6 @@ a {
     margin-top: 6px;
 }
 
-/* ========== STATS ========== */
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -263,7 +257,6 @@ a {
     margin-top: 4px;
 }
 
-/* ========== CARD ========== */
 .card {
     background: var(--paper-raised);
     border-radius: 8px;
@@ -316,7 +309,6 @@ a {
     text-decoration: underline;
 }
 
-/* ========== TABLE ========== */
 .table-wrap {
     overflow-x: auto;
 }
@@ -364,7 +356,6 @@ table tbody tr:last-child td {
     border-bottom: none;
 }
 
-/* ========== BUTTON ========== */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -438,7 +429,6 @@ table tbody tr:last-child td {
     color: #fdfcf8;
 }
 
-/* ========== FORM ========== */
 .form-container {
     background: var(--paper-raised);
     padding: 24px;
@@ -508,7 +498,6 @@ table tbody tr:last-child td {
     margin-top: 8px;
 }
 
-/* ========== FILTER ========== */
 .filter-container {
     background: var(--paper-raised);
     padding: 20px 24px;
@@ -558,7 +547,6 @@ table tbody tr:last-child td {
     flex-wrap: wrap;
 }
 
-/* ========== TAG / STAMP ========== */
 .tag {
     display: inline-block;
     padding: 3px 12px;
@@ -589,7 +577,6 @@ table tbody tr:last-child td {
     color: var(--margin);
 }
 
-/* ========== TABLE CONTAINER ========== */
 .table-container {
     margin-top: 10px;
 }
@@ -616,7 +603,6 @@ table tbody tr:last-child td {
     color: var(--forest);
 }
 
-/* ========== EMPTY ========== */
 .empty {
     text-align: center;
     padding: 44px !important;
@@ -625,7 +611,6 @@ table tbody tr:last-child td {
     font-size: 13px;
 }
 
-/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
     :root {
         --sidebar-width: 60px;
