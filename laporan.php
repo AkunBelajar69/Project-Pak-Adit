@@ -2,7 +2,6 @@
 include 'koneksi.php';
 include 'icons.php';
 
-// Filter
 $filter_tanggal = isset($_GET['tanggal']) ? $_GET['tanggal'] : '';
 $filter_siswa = isset($_GET['siswa']) ? $_GET['siswa'] : '';
 $filter_status = isset($_GET['status']) ? $_GET['status'] : '';
@@ -22,7 +21,6 @@ if ($filter_status) $where .= " AND a.status='$filter_status'";
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-logo">
             <span class="logo-mark"><?= icon('stamp', 20) ?></span>
@@ -52,10 +50,8 @@ if ($filter_status) $where .= " AND a.status='$filter_status'";
         </nav>
     </aside>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Page Title -->
             <div class="page-title">
                 <span class="eyebrow">Rekap &amp; Analisis</span>
                 <h1>
@@ -65,7 +61,6 @@ if ($filter_status) $where .= " AND a.status='$filter_status'";
                 <p>Filter dan lihat data absensi</p>
             </div>
 
-            <!-- Filter -->
             <div class="filter-container">
                 <div class="filter-title">
                     <?= icon('filter', 16) ?>
@@ -106,7 +101,6 @@ if ($filter_status) $where .= " AND a.status='$filter_status'";
                 </form>
             </div>
 
-            <!-- Table -->
             <div class="table-container">
                 <div class="table-title">
                     <span class="icon"><?= icon('note', 16) ?></span>
