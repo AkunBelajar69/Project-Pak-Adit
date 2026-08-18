@@ -2,7 +2,6 @@
 include 'koneksi.php';
 include 'icons.php';
 
-// Proses tambah siswa
 if (isset($_POST['tambah'])) {
     $nama = $_POST['nama'];
     $kelas = $_POST['kelas'];
@@ -10,14 +9,12 @@ if (isset($_POST['tambah'])) {
     echo "<script>alert('Siswa berhasil ditambahkan!'); window.location='siswa.php';</script>";
 }
 
-// Proses hapus siswa
 if (isset($_GET['hapus'])) {
     $id = $_GET['hapus'];
     mysqli_query($conn, "DELETE FROM siswa WHERE id='$id'");
     echo "<script>alert('Siswa dihapus!'); window.location='siswa.php';</script>";
 }
 
-// Proses edit siswa
 if (isset($_POST['edit'])) {
     $id = $_POST['id'];
     $nama = $_POST['nama'];
@@ -42,7 +39,6 @@ if (isset($_GET['edit'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-logo">
             <span class="logo-mark"><?= icon('stamp', 20) ?></span>
@@ -72,10 +68,8 @@ if (isset($_GET['edit'])) {
         </nav>
     </aside>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Page Title -->
             <div class="page-title">
                 <span class="eyebrow">Data Peserta Didik</span>
                 <h1>
@@ -85,7 +79,6 @@ if (isset($_GET['edit'])) {
                 <p>Kelola data siswa</p>
             </div>
 
-            <!-- Form -->
             <div class="form-container">
                 <div class="form-title">
                     <?= icon($edit_data ? 'pencil' : 'plus', 18) ?>
@@ -115,7 +108,6 @@ if (isset($_GET['edit'])) {
                 </form>
             </div>
 
-            <!-- Table -->
             <div class="table-container">
                 <div class="table-title">
                     <span class="icon"><?= icon('users', 16) ?></span>
